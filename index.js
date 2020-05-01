@@ -128,3 +128,28 @@ variableInterestRate(200000, 0.04, 30);
 /* 🏡 Explore using `window.prompt()` to allow a user to input parameters in the browser */
 
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates (make sure to copy and paste as to not lose your work!) */
+const interestRateArr = [
+  0.02,
+  0.025,
+  0.03,
+  0.035,
+  0.04,
+  0.045,
+  0.05,
+  0.055,
+  0.06,
+];
+
+function variableInterestRate2(P, interestRateArr, N) {
+  for (let i = 0; i < interestRateArr.length; i++) {
+    console.log(
+      `${name}, with an interest rate of ${
+        interestRateArr[i]
+      }, your monthly rate is ${Math.round(
+        mortgageCalculator2(P, interestRateArr[i], N),
+      )}`,
+    );
+  }
+}
+
+variableInterestRate2(200000, interestRateArr, 30);
